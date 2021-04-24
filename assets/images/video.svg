@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.0"
+   x="0px"
+   y="0px"
+   viewBox="0 0 975.5 547.09998"
+   enable-background="new 0 0 1000 1000"
+   xml:space="preserve"
+   id="svg22"
+   width="975.5"
+   height="547.09998"><metadata
+   id="metadata28"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs26" />
+<g
+   id="Layer_1"
+   display="none"
+   transform="translate(-12.3,-226.5)">
+	<g
+   display="inline"
+   id="g10">
+		<path
+   d="M 754.1,346.2 H 40.5 c -8.5,0 -15.3,6.9 -15.3,15.3 v 468.9 c 0,8.5 6.9,15.3 15.3,15.3 H 754 c 8.5,0 15.3,-6.9 15.3,-15.3 V 361.5 c 0.1,-8.5 -6.8,-15.3 -15.2,-15.3 z M 738.7,815.1 H 55.8 V 376.8 h 682.9 z"
+   id="path2" />
+		<path
+   d="M 858.7,251.6 H 256.8 c -8.5,0 -15.3,6.9 -15.3,15.3 0,8.4 6.9,15.3 15.3,15.3 H 843.4 V 671 c 0,8.5 6.9,15.3 15.3,15.3 8.5,0 15.3,-6.9 15.3,-15.3 V 266.9 c 0,-8.5 -6.9,-15.3 -15.3,-15.3 z"
+   id="path4" />
+		<path
+   d="m 959.5,154.3 h -602 c -8.5,0 -15.3,6.9 -15.3,15.3 0,8.5 6.9,15.3 15.3,15.3 h 586.6 v 388.7 c 0,8.5 6.9,15.3 15.3,15.3 8.5,0 15.3,-6.9 15.3,-15.3 v -404 c 0.1,-8.5 -6.8,-15.3 -15.2,-15.3 z"
+   id="path6" />
+		<path
+   d="m 294,740.8 c 2.4,1.4 5,2.1 7.7,2.1 2.6,0 5.3,-0.7 7.7,-2.1 l 228,-131.6 c 4.7,-2.7 7.7,-7.8 7.7,-13.3 0,-5.5 -2.9,-10.5 -7.7,-13.3 L 309.4,451 c -4.7,-2.7 -10.6,-2.7 -15.3,0 -4.7,2.7 -7.7,7.8 -7.7,13.3 v 263.3 c 0,5.4 2.9,10.5 7.6,13.2 z M 317,490.9 499,596 317,701 Z"
+   id="path8" />
+	</g>
+</g>
+<g
+   id="Layer_2"
+   transform="translate(-12.3,-226.5)">
+	<g
+   id="g19">
+		<path
+   fill="none"
+   stroke="#0f1923"
+   stroke-width="32"
+   stroke-linecap="round"
+   stroke-linejoin="round"
+   stroke-miterlimit="10"
+   d="M 682.2,757.6 H 59 c -17,0 -30.7,-13.8 -30.7,-30.7 V 273.2 c 0,-17 13.8,-30.7 30.7,-30.7 h 623.3 c 17,0 30.7,13.8 30.7,30.7 v 453.7 c 0,16.9 -13.8,30.7 -30.8,30.7 z"
+   id="path13" />
+		
+			<polyline
+   fill="none"
+   stroke="#0f1923"
+   stroke-width="32"
+   stroke-linecap="round"
+   stroke-linejoin="round"
+   stroke-miterlimit="10"
+   points="    713,584.1 927.1,707.8 971.8,707.8 971.8,292.2 927.1,292.2 713,415.9   "
+   id="polyline15" />
+		
+			<polygon
+   fill="none"
+   stroke="#0f1923"
+   stroke-width="32"
+   stroke-linecap="round"
+   stroke-linejoin="round"
+   stroke-miterlimit="10"
+   points="296.7,628 518.4,500 296.7,372 "
+   id="polygon17" />
+	</g>
+</g>
+</svg>
