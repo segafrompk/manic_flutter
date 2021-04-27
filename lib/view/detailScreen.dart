@@ -5,8 +5,10 @@ import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:manic_flutter/helper/constants.dart';
 import 'package:manic_flutter/model/article.dart';
 import 'package:manic_flutter/view/menu.dart';
-import 'package:webview_flutter/webview_flutter.dart';
-import 'package:webview_flutter_plus/webview_flutter_plus.dart';
+// import 'package:webview_flutter/webview_flutter.dart';
+// import 'package:webview_flutter_plus/webview_flutter_plus.dart';
+
+// TODO: Ocisti widget, sredi twitter embed preko iframe-a, dodaj RefreshIndicator
 
 class DetailScreen extends StatefulWidget {
   final Article articleData;

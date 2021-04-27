@@ -4,6 +4,9 @@ import 'package:manic_flutter/helper/urlRequest.dart';
 import 'package:manic_flutter/providers/providers.dart';
 import 'article.dart';
 
+// TODO: Razdvoji provider za trenutnu kategoriju od baze za sve kategorije
+// kojima je pristupano
+
 class ArticleRepository extends StateNotifier<Map<String, Map>> {
   ProviderReference providerRef;
   ArticleRepository(this.providerRef) : super(<String, Map>{});
