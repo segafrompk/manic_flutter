@@ -1,15 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:manic_flutter/model/article.dart';
 import '../helper/constants.dart';
+import 'detailScreen.dart';
 
 class ArticleCardBig extends StatelessWidget {
-  final Article? articleData;
+  final Article articleData;
   ArticleCardBig(this.articleData);
 
   @override
   Widget build(BuildContext context) {
-    if (articleData != null) {
-      return Column(
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => DetailScreen(articleData: articleData),
+          ),
+        );
+      },
+      child: Column(
         children: [
           AspectRatio(
             aspectRatio: 1,
@@ -18,7 +27,7 @@ class ArticleCardBig extends StatelessWidget {
               clipBehavior: Clip.hardEdge,
               child: Image.network('https://' +
                   apiAddress +
-                  articleData!.articleCover['formats']['medium']['url']),
+                  articleData.articleCover['formats']['medium']['url']),
             ),
           ),
           Container(
@@ -30,13 +39,13 @@ class ArticleCardBig extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  '${articleData!.category['categoryName']}'.toUpperCase(),
+                  '${articleData.category['categoryName']}'.toUpperCase(),
                   style: TextStyle(
                       fontFamily: 'Vollkorn Regular', fontSize: 12, height: 1),
                 ),
                 SizedBox(height: 6),
                 Text(
-                  '${articleData!.title}',
+                  '${articleData.title}',
                   maxLines: 2,
                   style: TextStyle(
                       fontFamily: 'BebasNeue', fontSize: 20, height: 1),
@@ -45,9 +54,7 @@ class ArticleCardBig extends StatelessWidget {
             ),
           ),
         ],
-      );
-    } else {
-      return Container();
-    }
+      ),
+    );
   }
 }
