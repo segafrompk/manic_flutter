@@ -16,6 +16,7 @@ class ManicUI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      themeMode: ThemeMode.light,
       home: SafeArea(
         child: Scaffold(
           body: Column(

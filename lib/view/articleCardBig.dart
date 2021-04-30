@@ -13,8 +13,10 @@ class ArticleCardBig extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(
-            builder: (context) => DetailScreen(articleData: articleData),
+          PageRouteBuilder(
+            pageBuilder: (context, animation1, animation2) =>
+                DetailScreen(articleData: articleData),
+            transitionDuration: Duration(milliseconds: 0),
           ),
         );
       },

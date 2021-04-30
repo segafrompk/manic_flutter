@@ -5,7 +5,7 @@ import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:manic_flutter/helper/constants.dart';
 import 'package:manic_flutter/model/article.dart';
 import 'package:manic_flutter/view/menu.dart';
-// import 'package:webview_flutter/webview_flutter.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 // import 'package:webview_flutter_plus/webview_flutter_plus.dart';
 
 // TODO: Ocisti widget, sredi twitter embed preko iframe-a, dodaj RefreshIndicator
@@ -21,18 +21,17 @@ class DetailScreen extends StatefulWidget {
 class _DetailScreenState extends State<DetailScreen> {
   // late WebViewPlusController _controller;
   // double _height = 600;
-  // @override
-  // void initState() {
-  //   // TODO: implement initState
-  //   super.initState();
-  //   if (Platform.isAndroid) WebView.platform = SurfaceAndroidWebView();
-  // }
+  @override
+  void initState() {
+    super.initState();
+    if (Platform.isAndroid) WebView.platform = SurfaceAndroidWebView();
+  }
 
   RegExp findInstagramBlock =
       RegExp("<blockquote.+class=\\\"instagram-media.+<\/blockquote>");
 
-  RegExp findInstagramLink =
-      RegExp("https:\/\/www\.instagram\.com\/p\/[^(\?utmsource)]+");
+  RegExp findInstagramLink = RegExp(
+      r"https?:\/\/www\.instagram\.com\/(p|tv)\/.{3,12}(?=\/\?utm_source)");
 
   String parseArticleBodyForEmbeds(String articleBody) {
     String newArticleBody =
@@ -40,14 +39,25 @@ class _DetailScreenState extends State<DetailScreen> {
       var linkMatch;
       if (match[0] != null) {
         linkMatch = findInstagramLink.firstMatch(match[0]!);
-      }
 
-      bool isCaptioned = match[0]!.contains('data-instgrm-captioned');
+        print('Match is...');
+        print(match[0]);
+        if (linkMatch?[0] != null) {
+          print('Captured link is...');
+          print(linkMatch[0]);
+        }
 
-      if (linkMatch != null) {
-        return "<iframe src='${linkMatch[0]}embed${isCaptioned ? '/captioned' : ''}' frameborder='0' scrolling='no' allowtransparency='true'></iframe>";
+        bool isCaptioned = match[0]!.contains('data-instgrm-captioned');
+
+        if (linkMatch != null) {
+          String iframe =
+              "<iframe src='${linkMatch[0]}/embed${isCaptioned ? '/captioned' : ''}' frameborder='0' scrolling='no' allowtransparency='true'></iframe>";
+          print(iframe);
+          return iframe;
+        }
+        return match[0]!;
       }
-      return match[0]!;
+      return '';
     });
     // print(newArticleBody);
     return newArticleBody;
@@ -55,8 +65,9 @@ class _DetailScreenState extends State<DetailScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: SafeArea(
+    return MaterialApp(
+      themeMode: ThemeMode.light,
+      home: SafeArea(
         child: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.white,
